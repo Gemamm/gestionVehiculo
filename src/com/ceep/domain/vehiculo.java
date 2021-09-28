@@ -7,9 +7,9 @@ package com.ceep.domain;
 
 public class vehiculo {
     
-    String matricula, marca, modelo, color;
-    double tarifa;
-    boolean disponible;
+    private String matricula, marca, modelo, color;
+    private double tarifa;
+    private boolean disponible;
 
     public vehiculo() {
     }

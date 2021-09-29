@@ -10,9 +10,16 @@ public class vehiculo {
     private String matricula, marca, modelo, color;
     private double tarifa;
     private boolean disponible;
+    private int idVehiculo;
+    private static int contador;
+    
+    
 
     public vehiculo() {
+        this.idVehiculo = ++vehiculo.contador;
     }
+
+   
 
     public vehiculo(String matricula, String marca, String modelo, String color, double tarifa, boolean disponible) {
         this.matricula = matricula;
@@ -54,7 +61,18 @@ public class vehiculo {
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
     }
-    
+     public int getIdVehiculo() {
+        return idVehiculo;
+    }
+
+    public static int getContador() {
+        return contador;
+    }
+
+    public static void setContador(int contador) {
+        vehiculo.contador = contador;
+    }
+     
     public void mostrar()
     {
         System.out.println("Matricula: "+matricula);
@@ -68,7 +86,7 @@ public class vehiculo {
 
     @Override
     public String toString() {
-        return "vehiculo:\n" + "matricula:" + matricula + "\nmarca:\t" + marca + "\nmodelo:\t" + modelo + "\ncolor:\t" + color + "\ntarifa:\t" + tarifa + "\ndisponible:\t" + disponible ;
+        return "vehiculo:\t" + idVehiculo + "\nmatricula:" + matricula + "\nmarca:\t" + marca + "\nmodelo:\t" + modelo + "\ncolor:\t" + color + "\ntarifa:\t" + tarifa + "\ndisponible:\t" + disponible ;
     }
      
     

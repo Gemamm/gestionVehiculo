@@ -6,12 +6,16 @@ package com.ceep.domain;
 // Clase vehiculo
 
 public class vehiculo {
+    private int idVehiculo;
     
     private String matricula, marca, modelo, color;
     private double tarifa;
     private boolean disponible;
+    private static int contadorVehiculo;
+    
 
     public vehiculo() {
+        this.idVehiculo = ++Vehiculo.contadorVehiculo;
     }
 
     public vehiculo(String matricula, String marca, String modelo, String color, double tarifa, boolean disponible) {
